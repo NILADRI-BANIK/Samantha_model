@@ -1,75 +1,173 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Samantha Model — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Samantha_model** is a modern, responsive React portfolio project (folder `WEB06/`) showcasing a fashion/modeling persona and related work. This README explains the project purpose, structure, how to run it locally, how to build & deploy, and tips to customize content and assets.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔎 Project Overview
 
-### `npm start`
+This portfolio demonstrates:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* A polished hero / intro section.
+* Recent work / media galleries.
+* Contact and social links.
+* Lightweight, production-ready build output (prebuilt files are available under `build_web06/` and `build_web06.zip`).
+* Built with a React-based structure and conventional project layout.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Intended use: a personal portfolio to present a model/designer persona, images, and short bios — easily customizable for any creative professional.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure (summary)
 
-### `npm run build`
+```
+WEB06/
+├── build_web06/            # Production build (static files ready to host)
+├── node_modules/           # Dependencies (generated via npm install)
+├── public/                 # Public assets and index.html
+├── src/                    # Source code (React)
+│   ├── assets/             # Images, icons, media used in the site
+│   ├── component/          # Reusable components (Hero, Message, Recent, etc.)
+│   ├── page/
+│   │   └── Home.jsx        # Main page component
+│   ├── App.js
+│   ├── index.js
+│   └── ...                 # CSS, tests, and utilities
+├── .gitignore
+├── build_web06.zip         # Archived production build
+├── package-lock.json
+├── package.json
+└── README.md               # This file
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✅ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Responsive layout (desktop, tablet, mobile).
+* Hero section with social icons and CTA.
+* Modular components for easy content updates.
+* Prebuilt static bundle in `build_web06/` for direct deployment.
+* Simple structure for designers/developers to replace images and text.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Quick Start — Run Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Prerequisites**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Node.js (v14+ recommended) and npm installed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Steps**
 
-## Learn More
+1. Open a terminal and go to project root:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   cd "D:\All assignment\web-06\web06"   # or your local path
+   ```
+2. Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install
+   ```
+3. Start the development server:
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
+4. Open the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   * Visit `http://localhost:3000` in your browser (Create React App default).
 
-### Analyzing the Bundle Size
+> If `package.json` uses different scripts, replace commands accordingly (e.g. `yarn` or custom start script).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🏗️ Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To create an optimized production build (static files):
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Output will be placed in the `build/` (or `build_web06/`) folder depending on the project configuration. The prebuilt files are already included under `build_web06/` and `build_web06.zip`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📤 Deployment Options
 
-### `npm run build` fails to minify
+**1. GitHub Pages (simple):**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Samantha_model
-Samantha_model is a passionate fashion model and designer blending creativity, style, and elegance in every look.
->>>>>>> b165500a274eddc249bbd1fee4ad99ee865ac0ca
+* Option A — use `gh-pages` package (if not already configured):
+
+  ```bash
+  npm install --save-dev gh-pages
+  # add homepage to package.json and scripts for deploy
+  npm run build
+  npm run deploy
+  ```
+* Option B — use GitHub repository → Settings → Pages → publish `build` folder (or `build_web06`) via the UI.
+
+**2. Netlify / Vercel:**
+
+* Drag & drop `build_web06/` (or connect repo) or configure build command `npm run build` and publish folder `build` (or `build_web06`).
+
+**3. Static host (S3, Surge, Firebase Hosting):**
+
+* Upload contents of the production build folder.
+
+---
+
+## ✍️ How to Customize Content
+
+* **Text & Pages**: Edit React components in `src/component/` and `src/page/Home.jsx`.
+* **Images and Media**: Replace files in `src/assets/` (keep same filenames or update imports).
+* **Colors / Styles**: Update CSS/SCSS files in `src` (component module styles are in each component folder).
+* **Social Links**: Find the component that renders social icons and update URLs/props.
+
+---
+
+## ⚙️ Recommended Git Ignore
+
+Make sure `node_modules/`, build artifacts and environment files are ignored. Example `.gitignore` entries:
+
+```
+node_modules/
+build/
+build_web06/
+.env
+.DS_Store
+```
+
+---
+
+## 🧰 Useful Commands (summary)
+
+```bash
+npm install        # install dependencies
+npm start          # start dev server
+npm test           # run tests (if configured)
+npm run build      # create production build
+npm run lint       # lint code (if configured)
+```
+
+---
+
+## 🧾 Notes & Best Practices
+
+* Keep original image assets in `src/assets/` for easier editing; do not commit large generated build artifacts to main branch if you prefer a lean repo.
+* Use meaningful filenames for assets (avoid spaces and parentheses) — e.g. `hero.jpg`, `logo.png`.
+* For deployment to GitHub Pages, add `"homepage": "https://<username>.github.io/<repo-name>"` to `package.json` if using `gh-pages`.
+* If the project already contains `build_web06/` and `build_web06.zip`, those are ready-to-serve static files; you can serve them directly without building again.
+
+---
+
+## 📬 Contact / Credits
+
+* **Author / Maintainer:** Niladri Banik (repo owner)
+* For help customizing or deploying the portfolio, open an issue on the repo or reach out via your preferred contact method (email or social links included in the project).
+
+---
+
+

@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.introSection {
+  background: linear-gradient(270deg, #4c5c6c 0%, #1a1720 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 0;
+      margin-left: 350px;
+      margin-top: -80px;
+
+      .textContent {
+        flex: 1;
+        padding-left: 80px;
+        padding-right: 40px;
+        z-index: 2;
+        margin-top: 0rem;
+
+        .titleWrapper {
+          display: flex;
+          align-items: center;
+          gap: 50px;
+
+          .title {
+            font-family: "Italiana", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 120px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #ffffff;
+          }
+
+          .titleLine {
+            transform: rotate(90deg);
+            opacity: 1;
+            margin-left: 200px;
+          }
+        }
+
+        .description {
+          display: flex;
+          gap: 30px;
+          max-width: 600px;
+          margin-top: -115px;
+
+          .verticalLine {
+            width: 2px;
+            background: #ffffff;
+            min-height: 250px;
+            opacity: 0.6;
+            margin-left: 20px;
+          }
+
+          .textWrapper {
+            p {
+              font-family: "Poppins", sans-serif;
+              font-weight: 500;
+              font-style: normal;
+              font-size: 25px;
+              line-height: 219%;
+              letter-spacing: 0;
+              color: #ffffff;
+              margin: 0;
+              margin-left: 11px;
+            }
+          }
+        }
+      }
+
+      .imageContent {
+        flex: 1;
+        height: 103vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: relative;
+        margin-bottom: -20px;
+        left: -63px;
+
+        .modelImage {
+          height: 90%;
+          width: auto;
+          object-fit: cover;
+          object-position: top center;
+        }
+      }
+    }
+  }
+
+  // 1440px - Large Desktop
+  @media screen and (max-width: 1440px) {
+    .container {
+      .content {
+        margin-left: 250px;
+
+        .textContent {
+          padding-left: 60px;
+
+          .titleWrapper {
+            .title {
+              font-size: 100px;
+            }
+          }
+
+          .description {
+            max-width: 550px;
+
+            .textWrapper {
+              p {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 1200px - Medium Desktop
+  @media screen and (max-width: 1200px) {
+    .container {
+      .content {
+        margin-left: 150px;
+
+        .textContent {
+          padding-left: 50px;
+
+          .titleWrapper {
+            .title {
+              font-size: 90px;
+            }
+          }
+
+          .description {
+            max-width: 500px;
+            margin-top: -100px;
+
+            .verticalLine {
+              min-height: 200px;
+            }
+
+            .textWrapper {
+              p {
+                font-size: 20px;
+                line-height: 200%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 1024px - Tablet Landscape
+  @media screen and (max-width: 1024px) {
+    .container {
+      height: auto;
+      min-height: 100vh;
+
+      .content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 0;
+        margin-left: 0;
+        margin-top: 0;
+        gap: 40px;
+
+        .textContent {
+          padding: 0 60px;
+          text-align: center;
+          flex: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .titleWrapper {
+            gap: 30px;
+            justify-content: center;
+            flex-direction: column;
+
+            .title {
+              font-size: 80px;
+            }
+
+            .titleLine {
+              transform: rotate(0deg);
+              width: 100px;
+              height: 2px;
+              margin-left: 0;
+            }
+          }
+
+          .description {
+            margin-top: 30px;
+            max-width: 600px;
+            justify-content: center;
+
+            .verticalLine {
+              display: none;
+            }
+
+            .textWrapper {
+              text-align: center;
+
+              p {
+                font-size: 18px;
+                line-height: 180%;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        .imageContent {
+          height: 500px;
+          flex: none;
+          margin-top: 0;
+          left: 0;
+          margin-bottom: 0;
+          justify-content: center;
+
+          .modelImage {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  // 768px - Tablet Portrait
+  @media screen and (max-width: 768px) {
+    .container {
+      .content {
+        padding: 50px 0;
+        gap: 35px;
+
+        .textContent {
+          padding: 0 40px;
+
+          .titleWrapper {
+            gap: 25px;
+
+            .title {
+              font-size: 64px;
+              line-height: 105%;
+            }
+
+            .titleLine {
+              width: 80px;
+            }
+          }
+
+          .description {
+            margin-top: 25px;
+            max-width: 500px;
+
+            .textWrapper {
+              p {
+                font-size: 16px;
+                line-height: 170%;
+              }
+            }
+          }
+        }
+
+        .imageContent {
+          height: 450px;
+
+          .modelImage {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+          }
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: 631px) {
+    .container {
+      .content {
+        padding: 45px 0;
+        gap: 32px;
+        position: relative;
+        display: flex; // Add flexbox
+        flex-direction: column; // Stack vertically
+
+        .textContent {
+          padding: 0 30px;
+          position: relative;
+          z-index: 2;
+          order: 2; // Text comes second
+          background-color: transparent;
+          pointer-events: auto;
+
+          .titleWrapper {
+            gap: 22px;
+
+            .title {
+              font-size: 56px;
+              line-height: 105%;
+            }
+
+            .titleLine {
+              width: 70px;
+            }
+          }
+
+          .description {
+            margin-top: 22px;
+            max-width: 450px;
+
+            .textWrapper {
+              position: relative;
+              z-index: 2;
+              
+              p {
+                font-size: 15px;
+                line-height: 165%;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+              }
+            }
+          }
+        }
+
+        .imageContent {
+          height: 220px;
+          position: relative;
+          z-index: 1;
+          order: 1; // Image comes first
+          margin-top: 0; // Remove margin-top as order handles positioning
+          
+          .modelImage {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: -171px;
+          }
+        }
+      }
+    }
+  }
+
+  // 480px - Mobile Landscape
+  // @media screen and (max-width: 480px) {
+  //   .container {
+  //     .content {
+  //       padding: 40px 0;
+  //       gap: 30px;
+  //       position: relative;
+
+  //       .textContent {
+  //         padding: 0 25px;
+  //         position: relative;
+  //         z-index: 2;
+
+  //         .titleWrapper {
+  //           gap: 20px;
+
+  //           .title {
+  //             font-size: 48px;
+  //             line-height: 105%;
+  //             letter-spacing: 1px;
+  //           }
+
+  //           .titleLine {
+  //             width: 60px;
+  //           }
+  //         }
+
+  //         .description {
+  //           margin-top: 20px;
+  //           max-width: 400px;
+
+  //           .textWrapper {
+  //             p {
+  //               font-size: 14px;
+  //               line-height: 160%;
+  //             }
+  //           }
+  //         }
+  //       }
+
+  //       .imageContent {
+  //         height: 350px;
+  //         position: relative;
+  //         z-index: 1;
+
+  //         .modelImage {
+  //           width: 100%;
+  //           height: auto;
+  //           max-height: 350px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // // 375px - Mobile Portrait (iPhone SE, etc.)
+  // @media screen and (max-width: 375px) {
+  //   .container {
+  //     .content {
+  //       padding: 35px 0;
+  //       gap: 28px;
+  //       position: relative;
+
+  //       .textContent {
+  //         padding: 0 20px;
+  //         position: relative;
+  //         z-index: 2;
+
+  //         .titleWrapper {
+  //           gap: 18px;
+
+  //           .title {
+  //             font-size: 42px;
+  //             line-height: 108%;
+  //           }
+
+  //           .titleLine {
+  //             width: 50px;
+  //           }
+  //         }
+
+  //         .description {
+  //           margin-top: 18px;
+  //           max-width: 340px;
+
+  //           .textWrapper {
+  //             p {
+  //               font-size: 13px;
+  //               line-height: 155%;
+  //             }
+  //           }
+  //         }
+  //       }
+
+  //       .imageContent {
+  //         height: 320px;
+  //         position: relative;
+  //         z-index: 1;
+
+  //         .modelImage {
+  //           width: 100%;
+  //           height: auto;
+  //           max-height: 320px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // // 320px - Very Small Mobile
+  // @media screen and (max-width: 320px) {
+  //   .container {
+  //     .content {
+  //       padding: 30px 0;
+  //       gap: 25px;
+  //       position: relative;
+
+  //       .textContent {
+  //         padding: 0 15px;
+  //         position: relative;
+  //         z-index: 2;
+
+  //         .titleWrapper {
+  //           gap: 16px;
+
+  //           .title {
+  //             font-size: 36px;
+  //             line-height: 110%;
+  //           }
+
+  //           .titleLine {
+  //             width: 45px;
+  //           }
+  //         }
+
+  //         .description {
+  //           margin-top: 16px;
+  //           max-width: 290px;
+
+  //           .textWrapper {
+  //             p {
+  //               font-size: 12px;
+  //               line-height: 150%;
+  //             }
+  //           }
+  //         }
+  //       }
+
+  //       .imageContent {
+  //         height: 280px;
+  //         position: relative;
+  //         z-index: 1;
+
+  //         .modelImage {
+  //           width: 100%;
+  //           height: auto;
+  //           max-height: 280px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
